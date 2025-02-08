@@ -58,6 +58,10 @@ Text Domain: generatepress-child
 	--soft-aqua:#F0F6F5;
 	--slate-blue:#536E84;
 	--moss-green:#B8D7D3;
+<<<<<<< HEAD
+	--dark-charcoal:#272727;
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 }
 
 * {
@@ -100,17 +104,23 @@ a.generate-back-to-top {
     position: relative;
     top: 4px;
 }
+<<<<<<< HEAD
+=======
 .page-id-367 .product-page-wrapper .product-img img {
     max-width: 533px !important;
 }
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
 .help-button-wrap span {
 	display:none;
 }
+<<<<<<< HEAD
+=======
 .discount-apply-glpy .jumpstart-plan-head-c,.discount-apply-glpy span.or-head-c {
 	
 	display:none !important;
 }
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
 .header-content-wrapper {
     display: flex;
@@ -122,12 +132,15 @@ a.generate-back-to-top {
 .policy-checkbox-wrap input[type="checkbox"] + label::after {
     display: none !important;
 }
+<<<<<<< HEAD
+=======
 .page-id-365 .product-page-wrapper .product-img img {
     width: 100%;
     max-height: 750px;
     object-fit: contain;
     max-width: 500px;
 }
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
 .grid-container {
     margin-left: auto;
@@ -198,7 +211,13 @@ input.submit.modify-plan, input.submit.modify-plan:hover {
 .site-header .inside-header .site-logo img {
     max-width: 100px;
 }
+<<<<<<< HEAD
+.page-id-367 .product-page-wrapper .product-img img {
+    max-width: 533px !important;
+}
+=======
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 .site-header #site-navigation {
     width: 850px;
     display: flex;
@@ -1013,10 +1032,13 @@ span#agree-privacy-policy-error {
     margin: 30px 0 0;
 }
 
+<<<<<<< HEAD
+=======
 .stat-wrap {
 	display:none;
 }
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 .stat-wrap .member-success-stats {
     width: calc(33.33% - 30px);
     text-align: center;
@@ -1296,6 +1318,13 @@ span#agree-privacy-policy-error {
     gap: 0 15px;
 }
 
+<<<<<<< HEAD
+.three-month ul li:first-child {
+	font-weight:700 !important;
+}
+
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 .pricing-plans-tab-wrap .pricing-plans-tabs .tab-content ul li img {
     width: 12px;
 }
@@ -1447,6 +1476,8 @@ body.title-home .site-header .main-navigation .current_page_item {
     background-color: transparent;
 }
 
+<<<<<<< HEAD
+=======
 .site-info .disclaimer-fda-approved {
 	font-size: 12px;
   	font-weight: 500;
@@ -1456,6 +1487,7 @@ body.title-home .site-header .main-navigation .current_page_item {
     margin: 0 auto 15px;
 }
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 /* Footer Styling end */
 
 /* Contact Us start */
@@ -1814,8 +1846,11 @@ body.title-home .site-header .main-navigation .current_page_item {
 
 }
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 .custom-form-header .custom-header-inner {
     display: flex;
     align-items: center;
@@ -2439,9 +2474,15 @@ body.title-home .site-header .main-navigation .current_page_item {
 }
 
 .choose-plan-tabs-wrap .step-description {
+<<<<<<< HEAD
+  	text-align: left !important;
+	color: var(--navy-medium) !important;
+  	font-weight: 600;
+=======
   text-align: left !important;
 	color: var(--navy-medium) !important;
   font-weight: 600;
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 	font-size: 20px !important;
 }
 
@@ -2903,15 +2944,27 @@ body.title-home .site-header .main-navigation .current_page_item {
 
 .form-container .submit {
     width: 100%;
+<<<<<<< HEAD
+	background: var(--white-color);
+    border: 1px solid #9CB2BE;
+    color: var(--blue-light);
+=======
     background: var(--blue-shadow);
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
     border-radius: 10px;
     font-size: 16px;
     font-weight: 500;
     padding: 15px 0;
     display: inline-block;
 	text-align:center;
+<<<<<<< HEAD
+/* 	color:#fff;
+	background: var(--blue-shadow);
+	border: 1px solid var(--blue-shadow); */
+=======
 	color:#fff;
     border: 1px solid var(--blue-shadow);
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
     transition: 0.2s all;
     font-family: "Poppins", sans-serif;
 }
@@ -3019,6 +3072,13 @@ body.title-home .site-header .main-navigation .current_page_item {
 	margin:0 auto;
 }
 
+<<<<<<< HEAD
+.page-id-367 .product-page-wrapper .product-img img {
+    max-width: 500px;
+}
+
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 .page-template-oral-semaglutide-landing-page .product-page-wrapper .product-img img {
     max-width: 533px !important;
 }
@@ -3056,8 +3116,28 @@ body.title-home .site-header .main-navigation .current_page_item {
 
 .product-page-wrapper .product-page-inner .product-details .product-price span {
     color: #646D7C;
+<<<<<<< HEAD
+    text-decoration: line-through;
+    padding-left: 15px;
+}
+
+.title-injectable-semaglutide-1-month .product-page-wrapper .product-page-inner .product-details .product-price span{
+	padding-left: 0;
+	text-decoration:none;
+}
+
+.title-injectable-tirzepatide-1-month .product-page-wrapper .product-page-inner .product-details .product-price span{
+	padding-left: 0;
+	text-decoration:none;
+}
+
+.title-oral-semaglutide .product-page-wrapper .product-page-inner .product-details .product-price span{
+	padding-left: 0;
+	text-decoration:none;
+=======
 /*     text-decoration: line-through;
     padding-left: 15px; */
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 }
 
 .product-page-wrapper .product-page-inner .product-details .product-description {
@@ -3228,6 +3308,8 @@ body.title-home .site-header .main-navigation .current_page_item {
 
 /* Product Page Template Styles End */
 
+<<<<<<< HEAD
+=======
 .choose-plan-tabs-wrap .choose-plan-tabs-inner .step-main-heading  {
 	display:none;
 }
@@ -3235,6 +3317,7 @@ body.title-home .site-header .main-navigation .current_page_item {
 .woocommerce-cart .choose-booster-product-wrap.step-main-wrapper.step {
 	display:none !important;
 }
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
 /* Resposive Media Queries Start */
 
@@ -3545,10 +3628,13 @@ body.title-home .site-header .main-navigation .current_page_item {
         font-size: 18px;
     }
 	
+<<<<<<< HEAD
+=======
 	.site-info .disclaimer-fda-approved {
 		max-width: 100%;
 	}
 	
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 /* 	Tirzepatide banned styles */
 	
 	.breaking-news-wrapper {
@@ -3781,6 +3867,13 @@ body.title-home .site-header .main-navigation .current_page_item {
 }
 
 @media only screen and (max-width:768px) {
+<<<<<<< HEAD
+	.choose-plan-tabs-wrap .step-description {
+		font-size:15px !important;
+	}
+	
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 	.glp-medication-wrap .glp-medication-content {
         background-color: var(--off-white);
         padding: 30px;
@@ -3799,10 +3892,13 @@ body.title-home .site-header .main-navigation .current_page_item {
     }
 
 	
+<<<<<<< HEAD
+=======
 	.site-info .disclaimer-fda-approved {
 		font-size:11px;
 	}
 	
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 	/* choose doosage sections css resposive */
     
      .dosage_selection_cform .product-container {
@@ -4844,11 +4940,18 @@ form#customForm {
 
 /* Resposive Media Queries End */
 
+<<<<<<< HEAD
+@media only screen and (min-width:768px) {
+	div#icon-toggle-mob {
+    display: none;
+	}
+=======
 
 @media only screen and (min-width:768px) {
 	div#icon-toggle-mob {
     display: none;
 }
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 }
 
 @media (max-width: 576px) {
@@ -4860,9 +4963,501 @@ form#customForm {
 @media only screen and (max-width: 768px) {
     .product-marquee {
     margin-bottom: 130px;
+<<<<<<< HEAD
+	}
+}
+
+
+/* For New Bootsers Product CSS all */
+
+/* for New boosters weight product */
+
+.pricing-plans-tab-wrap {
+	margin-bottom:150px;
+}
+
+.boosters-weight-product .guidance-box{
+	margin:0 10px;
+	padding:20px 15px 30px;
+}
+
+.boosters-weight-product .booster-product-inner {
+	padding:50px 0 30px !important;
+}
+
+.boosters-weight-product .slick-dots li button:before {
+    font-size: 10px;
+	color:var(--white-color);
+	opacity:1;
+}
+
+.boosters-weight-product .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: var(--blue-medium);
+}
+
+.boosters-weight-product .new-style-heading {
+    color: #77A7A0 !important;
+}
+
+.boosters-weight-product .invest-guidance-wrap::before {
+	height:200px;
+}
+
+.boosters-weight-product .slick-next,
+.boosters-weight-product .slick-prev {
+    height: 65px;
+    width: 65px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(5, 25, 65, 0.43);
+    border-radius: 100%;
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.boosters-weight-product .slick-prev {
+    left: -20px;
+}
+
+.boosters-weight-product .slick-next {
+    right: -20px;
+}
+
+.boosters-weight-product .slick-prev::before,
+.boosters-weight-product .slick-next::before {
+    content: "";
+    background-image: url(https://blueridgem2stg.wpenginepowered.com/wp-content/uploads/2024/12/arrow-custom.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    height: 30px;
+    width: 20px;
+    opacity: 1;
+}
+
+.boosters-weight-product .slick-prev::before {
+    transform: rotate(180deg);
+}
+
+.boosters-weight-product .slick-prev.slick-disabled,
+.boosters-weight-product .slick-next.slick-disabled {
+    display: none !important;
+}
+
+.boosters-weight-product .slick-prev:hover, .slick-next:hover {
+    background-color: rgba(5, 25, 65, 0.43) !important;
+}
+
+.title-injectable-b12, .title-injectable-glutathione, .product-page-wrapper .product-price span {
+    padding-left: 0 !important;
+	text-decoration:none !important;
+}
+
+
+/* product id base remove hidden */
+
+.product-cart-item-wrap a.remove-custom-cart[data-product_id="343"],
+.product-cart-item-wrap a.remove-custom-cart[data-product_id="352"],
+.product-cart-item-wrap a.remove-custom-cart[data-product_id="353"],
+.product-cart-item-wrap a.remove-custom-cart[data-product_id="354"],
+.product-cart-item-wrap a.remove-custom-cart[data-product_id="355"] {
+    display: none !important;
+}
+
+.product-cart-item-wrap input.qty {
+    pointer-events: none;
+}
+
+/* Form Booster CSS Start */
+
+/* CHOOSE YOUR BOOSTER PRODUCT */
+
+.choose-booster-product-wrap {
+	max-width:1200px;
+	margin:0 auto;
+}
+
+.choose-booster-product-wrap .step-description {
+    font-size: 18px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--blue-light);
+}
+
+.choose-booster-product-wrap .step-main-heading {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--blue-midnight);
+}
+
+.booster-product-section {
+    padding: 30px 40px;
+    background-color: var(--off-white);
+}
+
+.booster-product-select p {
+	font-size:12px;
+	font-weight:500;
+	color: var(--blue-light);
+	margin:0;
+	text-align:center;
+}
+
+.booster-product-select .booster_intro {
+	font-weight:600;
+	margin-bottom:15px;
+}
+
+.booster-product-select {
+	padding-top:20px;
+}
+
+.booster-product-section .booster-product-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	padding:30px 0;
+}
+
+.booster-product-grid h4 {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--blue-light);
+    background-color: #C7DCD9;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+}
+
+.booster-product-grid .pricing-amount {
+    font-size: 32px;
+    font-weight: 500;
+    color: #475D84;
+    line-height: 40px;
+    margin: 30px 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.booster-product-grid img {
+    max-height: 190px;
+    margin: 25px auto 40px;
+}
+
+.booster-product-grid .booster-pro-img {
+	margin:0;
+}
+
+.booster-product-grid .learn-more-booster {
+    width: 100%;
+    background: var(--white-color);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 0;
+	margin-top:15px;
+    display: inline-block;
+    text-align: center;
+    color: var(--blue-light);
+    border: 1px solid #9CB2BE;
+    font-family: "Poppins", sans-serif;
+	display:none;
+}
+
+.single-product-booster {
+    background: var(--white-smoke);
+	border-radius:15px;
+}
+
+.proceed_to_checkout {
+	text-align:center;
+/* 	display:none; */
+}
+
+.proceed_to_checkout .submit {
+	width:320px;
+	padding:15px 20px;
+}
+
+.booster-product-grid .submit {
+    display: none !important;
+}
+
+.booster-product-grid label {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    color: #fff;
+	background-color: var(--blue-light);
+    border: 1px solid var(--blue-light);
+	border-radius: 100px;
+    transition: 0.2s all;
+    cursor: pointer;
+	position:relative;
+    font-family: "Poppins", sans-serif;
+}
+
+.booster-product-grid label.remove::after {
+    content: "selected \2713";
+    font-size: 11px;
+	font-weight:600;
+    color: white;
+   	padding:4px 10px;
+   	display:inline-block;
+	background: var(--blue-light);
+    border-radius: 3px;
+	position:absolute;
+	top:-27px;
+	right:0;
+}
+
+.booster-product-section .booster-step-continue {
+	text-align:center;
+}
+
+.booster-product-section .booster-step-continue .submit {
+	padding: 15px 20px;
+	width:320px;
+	color:#fff;
+	background: var(--blue-shadow);
+	border: 1px solid var(--blue-shadow); */
+/* 	background: var(--white-color);
+	border: 1px solid #9CB2BE;
+    color: var(--blue-light); */
+}
+
+.booster-button-wrap {
+	display:flex;
+	gap:20px;
+	justify-content:center;
+}
+
+.booster-product-grid .booster-pro-img {
+    height: auto;
+    width: 100%;
+}
+
+.single-product-booster .button-wrap {
+    padding: 0;
+}
+
+.single-product-booster .booster-pro-detail {
+	padding:15px 20px;
+	background-color:var(--white-color);
+	border:1px solid #CCCCCC;
+	border-top:0;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	min-height:340px;
+}
+
+.booster-pro-detail .booster-heading {
+	font-size: 15px;
+  	font-weight: 600;
+  	color: #091D3D;
+	line-height:18px;
+}
+
+.booster-pro-detail .booster-amount {
+	font-size: 13px;
+  	font-weight: 600;
+  	color: #091D3D;
+}
+
+.single-product-booster .booster-pro-detail p {
+	text-align:left;
+}
+
+.booster-pro-detail span {
+ 	color: #898989;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 17px;
+    display: block;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 15px 0;
+    border-bottom: 1px solid #B7BFC4;
+    margin-bottom: 15px;
+}
+
+.booster-pro-detail .booster-description {
+	color: #091D3D;
+    font-size: 12px;
+    line-height: 21px;
+    display: block;
+    font-weight: 500;
+	margin-bottom:20px;
+}
+
+.choose-plan-tabs-wrap .choose-plan-tabs-inner .step-main-heading  {
+	display:none;
+}
+
+.woocommerce-cart .choose-booster-product-wrap.step-main-wrapper.step {
+	display:none !important;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .single-product-booster .booster-pro-detail {
+        min-height: 320px; /* Avoid !important if possible */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+	
+	.booster-product-grid .booster-pro-img {
+		height: auto;
+		width: 100%;
+		min-height: 220px;
+	}
+}
+
+
+@media only screen and (max-width: 1024px) {
+	.boosters-weight-product .slick-next,
+	.boosters-weight-product .slick-prev {
+		height: 40px;
+		width: 40px;
+	}
+	
+	.boosters-weight-product .slick-prev::before,
+	.boosters-weight-product .slick-next::before {
+		height: 20px;
+		width:	15px;
+	}
+	
+	.booster-product-select p {
+		font-size:11px;
+	}
+	
+	.booster-product-select p br {
+		display:none;
+	}
+	
+	.booster-product-section .booster-product-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	.booster-product-grid .pricing-amount {
+		font-size: 24px;
+		line-height: 30px;
+		margin: 20px 0 5px;
+	}
+	
+	.booster-product-grid h4 {
+		padding: 10px;
+		font-size: 15px;
+		line-height: 17px;
+		height: 60px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.booster-product-section .booster-product-grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	
+	.booster-product-select p {
+        font-size: 11px;
+    }
+	
+	.choose-booster-product-wrap .step-description {
+		font-size: 15px;
+	}
+	
+	.choose-booster-product-wrap .step-main-heading {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	
+	.proceed_to_checkout .submit {
+		width:100%;
+	}
+	
+	.booster-product-section .booster-step-continue .submit {
+		width:100%;
+	}
+	
+	.single-product-booster .booster-pro-detail {
+        min-height: auto;
+    }
+	
+	.booster-pro-detail .booster-description {
+		font-size: 11px;
+		line-height: 22px;
+	}
+	
+	.booster-pro-detail span {
+		font-size: 11px;
+		line-height: 18px;
+	}
+	
+	.booster-pro-detail .booster-heading {
+		font-size: 13px;
+		line-height: 17px;
+	}
+	
+	.booster-pro-detail .booster-amount {
+		font-size: 11px;
+	}
+	
+	.booster-product-grid label {
+		font-size: 12px;
+		padding: 10px 4px;
+	}
+	
+	.single-product-booster .booster-pro-detail {
+    	padding: 20px 20px 30px;
+	}
+	
+	.booster-product-section {
+		padding: 30px 20px;
+	}
+	
+	.booster-product-grid .booster-pro-img {
+		min-height: unset !important;
+		max-height:unset !important;
+	}
+	
+	.booster-button-wrap {
+		display:block;
+	}
+	
+	.booster-button-wrap input {
+		max-width:320px;
+	}
+	
+	.proceed_to_checkout {
+		margin-bottom:15px;
+=======
 }
 	
 	.choose-plan-tabs-wrap .step-description {
 		font-size:15px !important;
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 	}
 }

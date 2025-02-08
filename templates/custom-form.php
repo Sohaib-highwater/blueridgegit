@@ -18,7 +18,11 @@ get_header(); // This includes the header.php file
 .show-150-discount .three-month-tab-content p.pricing-discount.off-150-discount {
 	display:block !important;
 }
+<<<<<<< HEAD
+	.discount-apply-glpy li.month-3-tabs-selector,.discount-apply-glpy p.pricing-discount {
+=======
 	.discount-apply-glpy li.month-3-tabs-selector {
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 	display:none !important;
 }
 .discount-apply-glpy.choose-plan-tabs-wrap .tab-header li {
@@ -211,6 +215,106 @@ get_header(); // This includes the header.php file
 
 <div class="form-container">
     <form id="customForm" method="post" action="">
+<<<<<<< HEAD
+		
+		<!-- Choose Your Boosters Product Step -->
+		
+		<div class="choose-booster-product-wrap step-main-wrapper step" data-step="boaster-step">
+			<div class="booster-product-section">
+				<h3 class="step-main-heading">CHOOSE YOUR BOOSTER</h3>
+				<p class="step-description">Monthly</p>
+				<div class="booster-product-select">
+					<p class="booster_intro">
+					  Enhance your journey to better health and weight loss with our premium booster supplements!
+					</p>
+					<p>Designed to complement your GLP-1 treatment, these products—MIC, B12, Sermorelin, and <br> Glutathione—offer benefits like improved metabolism, increased energy, better sleep, and enhanced <br> overall wellbeing. Would you like to add any of these to your cart for even greater results?
+					</p>
+					<div class="booster-product-grid">
+						<div class="single-product-booster">
+							<img class="booster-pro-img" src="https://blueridgem2stg.wpenginepowered.com/wp-content/uploads/2025/01/b12-booster-n.png" alt="B12">
+							<div class="booster-pro-detail">
+								<h5 class="booster-heading">B12</h5>
+								<p class="booster-amount">$60/month</p>
+								<span>Boost energy and metabolism</span>
+								<p class="booster-description">
+									Vitamin B12 is crucial for red blood cell formation, nerve function, and converting food into fuel. By supporting these processes, B12 helps maintain steady energy levels and overall vitality.
+								</p>
+								<div class="button-wrap">
+									<input type="checkbox" id="b12-select" name="product" class="submit"  onclick="addCartboasternextStep('b12');toggleCheckboxSelect(this)">
+									<label for="b12-select" id="b12-label">Add to Cart</label>
+								</div>
+							</div>
+						</div>
+						<div class="single-product-booster">
+							<img class="booster-pro-img" src="https://blueridgem2stg.wpenginepowered.com/wp-content/uploads/2025/01/mic-booster-new_2.png" alt="Mic">
+							<div class="booster-pro-detail">
+								<h5 class="booster-heading">MIC</h5>
+								<p class="booster-amount">$60/month</p>
+								<span>Support fat metabolism and liver health</span>
+								<p class="booster-description">
+									MIC combines Methionine, Inositol, and Choline—nutrients that aid in breaking down fats while promoting a healthy liver. This blend optimizes your body’s ability to process and use energy effectively.
+								</p>
+								<div class="button-wrap">
+									<input type="checkbox" id="mic-select" name="product" class="submit"  onclick="addCartboasternextStep('mic');toggleCheckboxSelect(this)">
+									<label for="mic-select" id="mic-label">Add to Cart</label>
+								</div>
+							</div>
+						</div>
+						<div class="single-product-booster">
+							<img class="booster-pro-img" src="https://blueridgem2stg.wpenginepowered.com/wp-content/uploads/2025/01/serm-booster.png" alt="Sermorelin">
+							<div class="booster-pro-detail">
+								<h5 class="booster-heading">Sermorelin</h5>
+								<p class="booster-amount">$249/month</p>
+								<span>Enhance recovery and promote healthy aging</span>
+								<p class="booster-description">
+									Sermorelin is a peptide that stimulates your natural production of growth hormone. By supporting hormone balance, it helps improve muscle tone, metabolism, and overall well-being.
+								</p>
+								<div class="button-wrap">
+									<input type="checkbox" id="serm-select" name="product" class="submit"  onclick="addCartboasternextStep('serm');toggleCheckboxSelect(this)">
+									<label for="serm-select" id="serm-label">Add to Cart</label>
+								</div>
+							</div>
+						</div>
+						<div class="single-product-booster">
+							<img class="booster-pro-img" src="https://blueridgem2stg.wpenginepowered.com/wp-content/uploads/2025/01/gluth-booster.png" alt="Glutathione">
+							<div class="booster-pro-detail">
+								<h5 class="booster-heading">Glutathione</h5>
+								<p class="booster-amount">$179/month</p>
+								<span>Boost immunity and defend against cell damage</span>
+								<p class="booster-description">
+									Glutathione is a powerful antioxidant that supports detoxification and helps protect cells from oxidative stress. Maintaining optimal levels can strengthen the immune system and enhance overall health.
+								</p>
+								<div class="button-wrap">
+									<input type="checkbox" id="gluth-select" name="product" class="submit"  onclick="addCartboasternextStep('gluth');toggleCheckboxSelect(this)">
+									<label for="gluth-select" id="gluth-label">Add to Cart</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="booster-button-wrap">
+						<div class="proceed_to_checkout">
+							<input class="submit" type="button" value="No Thanks - Proceed to Checkout"  onclick="showStepClearBoaster('step-privacy');">
+						</div>
+						<div class="booster-step-continue">
+							<input class="submit" type="button" value="Continue" onclick="showStep('step-privacy');">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contact-wrap">
+                <div class="top-img">
+                    <img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/09/BlueRidge-logo-small.png" alt="">
+                </div>
+                <div class="contact-details">
+                    <p>Reach Out</p>
+                    <a href="tel:+18552952538">855-295-BLUE (2538)</a>
+                    <a href="mailto:Ask@blueridgemeds.com">Ask@blueridgemeds.com</a>
+                    <a href="https://www.blueridgemeds.com">https://www.blueridgemeds.com</a>
+                </div>
+            </div>
+		</div>
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
        
 		<!-- Medication Dosage Select -->
 		
@@ -265,7 +369,11 @@ get_header(); // This includes the header.php file
 				<h3 class="step-main-heading">Have you previously taken or are you currently on a GLP-1 medication?</h3>
 				<p class="step-description">Please select one</p>
 				<div class="button-wrapper">
+<<<<<<< HEAD
+					<input class="submit step-yes" type="button" value="Yes" onclick="removeDiscountParam();">
+=======
 					<input class="submit step-yes" type="button" value="Yes" onclick="showStep('mg-select'); removeDiscountParam();">
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 					<input class="submit step-no" type="button" value="No" onclick="handleContinueClick('step-5'); addDiscountParam();">
 				</div>
 			</div>
@@ -614,7 +722,11 @@ get_header(); // This includes the header.php file
                     </div>
                 </div>
                 <div class="step-continue-wrap">
+<<<<<<< HEAD
+                 <input class="submit" type="button" value="Continue" onclick="addCartParameterAndShowNextStep('semag-1', 'boaster-step')">
+=======
                  <input class="submit" type="button" value="Continue" onclick="addCartParameterAndShowNextStep('semag-1', 'step-privacy')">
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
                     <p class="or">Or</p>
                     <input class="submit modify-plan" type="button" value="Modify your plan" onclick="showStep('step-all-products')">
@@ -675,7 +787,11 @@ get_header(); // This includes the header.php file
                                 </div>
                             </div>
                             <div class="step-continue-wrap">
+<<<<<<< HEAD
+                               <input class="submit" type="button" value="Continue" onclick="addCartParameterAndShowNextStep('semag-3', 'boaster-step')">
+=======
                                <input class="submit" type="button" value="Continue" onclick="addCartParameterAndShowNextStep('semag-3', 'step-privacy')">
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
                                 <p class="or">Or</p>
 								<input class="submit modify-plan" type="button" value="Modify your plan" onclick="showStep('step-all-products')">
@@ -734,7 +850,11 @@ get_header(); // This includes the header.php file
                                 </div>
                             </div>
                             <div class="step-continue-wrap">
+<<<<<<< HEAD
+                                <input class="submit" type="button" value="Continue" onclick="addCartParameterAndShowNextStep('tirze-1', 'boaster-step')">
+=======
                                 <input class="submit" type="button" value="Continue" onclick="addCartParameterAndShowNextStep('tirze-1', 'step-privacy')">
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
                                 <p class="or">Or</p>
                                 <input class="submit modify-plan" type="button" value="Modify your plan" onclick="showStep('step-all-products')">
@@ -793,7 +913,11 @@ get_header(); // This includes the header.php file
                                 </div>
                             </div>
                             <div class="step-continue-wrap">
+<<<<<<< HEAD
+                               <input class="submit" type="button" value="Continue" onclick="addCartParameterAndShowNextStep('tirze-3', 'boaster-step')">
+=======
                                <input class="submit" type="button" value="Continue" onclick="addCartParameterAndShowNextStep('tirze-3', 'step-privacy')">
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
 
                                 <p class="or">Or</p>
@@ -850,7 +974,11 @@ get_header(); // This includes the header.php file
                                 </div>
                             </div>
                             <div class="step-continue-wrap">
+<<<<<<< HEAD
+                                <input class="submit" type="button" value="Continue" onclick="addCartParameterAndShowNextStep('oral', 'boaster-step')">
+=======
                                 <input class="submit" type="button" value="Continue" onclick="addCartParameterAndShowNextStep('oral', 'step-privacy')">
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
                                 <p class="or">Or</p>
                               <input class="submit modify-plan" type="button" value="Modify your plan" onclick="showStep('step-all-products')">
@@ -900,7 +1028,11 @@ get_header(); // This includes the header.php file
 		<div class="step-main-wrapper choose-plan-tabs-wrap step" data-step="step-all-products">
     <div class="choose-plan-tabs-inner">
         <p class="step-description">CHOOSE YOUR PLAN</p>
+<<<<<<< HEAD
+        <h3 class="step-main-heading">Jumpstart or Monthly</h3>
+=======
         <h3 class="step-main-heading"><span class="jumpstart-plan-head-c">Jumpstart </span> <span class="or-head-c">or </span><span class="monthly-plan-head-c">Monthly</span> </h3>
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
         <div class="pricing-plans-tabs choose-plan-tabs">
             <ul class="tab-header">
                 <li class="active monthly-tabs-selector"><a href="#monthly">Monthly Payment</a></li>
@@ -1025,7 +1157,11 @@ get_header(); // This includes the header.php file
                         <h4>Semaglutide Program</h4>
                         <p class="pricing-amount">$747</p>
                         <p class="pricing-discount">-$100.00 off your 1st purchase</p>
+<<<<<<< HEAD
+						<p class="pricing-discount off-150-discount" style="display:none;">-$150.00 off your 1st purchase</p>
+=======
 						<p class="pricing-discount off-150-discount" style="display:none;">-$100.00 off your 1st purchase</p>
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
                         <img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/09/BlueRidge-Semaglutide-1-bottle-1.png" alt="">
                         <input class="submit" type="button" value="Select" onclick="addCartParameterAndShowNextStep('semag-3', 'step-semag-3')">
                     </div>
@@ -1058,7 +1194,11 @@ get_header(); // This includes the header.php file
                         <h4>Tirzepatide Program</h4>
                         <p class="pricing-amount">$1,047</p>
                         <p class="pricing-discount">-$100.00 off your 1st purchase</p>
+<<<<<<< HEAD
+						<p class="pricing-discount off-150-discount" style="display:none;">-$150.00 off your 1st purchase</p>
+=======
 						<p class="pricing-discount off-150-discount" style="display:none;">-$100.00 off your 1st purchase</p>
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
                         <img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/09/Layer-5-1.png" alt="">
                         <input class="submit" type="button" value="Select" onclick="addCartParameterAndShowNextStep('tirze-3', 'step-tirze-3')">
                     </div>
@@ -1112,7 +1252,10 @@ get_header(); // This includes the header.php file
                 <h3 class="step-main-heading">By subscribing, you are agreeing to our Privacy Policy</h3>
                 <div class="policy-checkbox-wrap">
                     <input type="checkbox" id="policy-checkbox" name="agree_privacy_policy">
+<<<<<<< HEAD
+=======
 					
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
                     <label for="policy-checkbox">Please check this box to indicate that you agree to the <a href="/terms-conditions/" target="_blank">Terms and Conditions Patient Agreement</a> and <a href="/consent-to-telehealth/" target="_blank">Telehealth Consent</a></label>
                 </div>
 			   <div class="field-valid-error interest-f-error"> 
@@ -1147,8 +1290,13 @@ get_header(); // This includes the header.php file
     </form>
 </div>
 
+<<<<<<< HEAD
+<script>
+	
+=======
 
 <script>
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 function checking(nextStep) {
     const currentStepContainer = document.querySelector(`[data-step="${nextStep}"]`);
     const requiredFields = currentStepContainer.querySelectorAll('input[required], select[required], textarea[required]');
@@ -1181,9 +1329,31 @@ function checking(nextStep) {
     });
 }
 	
+<<<<<<< HEAD
+	
+function toggleCheckboxSelect(checkbox) {
+    // Get the corresponding label
+    const label = document.querySelector(`label[for="${checkbox.id}"]`);
+
+    // Check if the checkbox is already selected
+    if (checkbox.checked) {
+        if (!label.classList.contains("remove")) {
+            // Change label text and add selected styling if not already selected
+            label.textContent = "Remove"; 
+            label.classList.add("remove");
+        }
+    } else {
+        // Reset label text and remove selected styling when unselected
+        label.textContent = "Add to cart"; 
+        label.classList.remove("remove");
+    }
+}
+
+=======
 
 	
 	
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 </script>
 
 <?php get_footer(); ?>

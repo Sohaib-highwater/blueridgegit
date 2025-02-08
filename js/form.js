@@ -1,14 +1,34 @@
+<<<<<<< HEAD
+// // Function to get URL parameters
+=======
 // Function to get URL parameters
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 function getUrlParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
 }
 
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 document.addEventListener('DOMContentLoaded', () => {
+<<<<<<< HEAD
+    // Add click event to all buttons with class 'submit'
+    document.querySelectorAll('.submit').forEach(button => {
+        button.addEventListener('click', () => {
+            updatePricesForAll();
+            checkDiscountAndToggleClass();
+        });
+    });
+
+    // Run the checkDiscountAndHideElements function on page load as well
+=======
     // Delegate click events to buttons with the class 'submit'
     document.body.addEventListener('click', (event) => {
         if (event.target.classList.contains('submit')) {
@@ -18,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Call the checkDiscountAndToggleClass function once on page load
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
     checkDiscountAndToggleClass();
 });
 
@@ -29,6 +50,18 @@ function checkDiscountAndToggleClass() {
     const allProductsSection = document.querySelector('[data-step="step-all-products"]');
 
     if (allProductsSection) {
+<<<<<<< HEAD
+        if (discount === 'apply') {
+            // Remove the class if discount is "apply"
+            allProductsSection.classList.remove('discount-apply-glpy');
+			allProductsSection.classList.add('show-150-discount');
+            console.log('Removed class "discount-apply-glpy" from the main container [data-step="step-all-products"]');
+        } else {
+            // Add the class if discount is not "apply"
+            allProductsSection.classList.add('discount-apply-glpy');
+			allProductsSection.classList.remove('show-150-discount');
+            console.log('Added class "discount-apply-glpy" to the main container [data-step="step-all-products"]');
+=======
         const pricingDiscounts = allProductsSection.querySelectorAll('.pricing-discount');
 
         if (discount === 'apply') {
@@ -54,6 +87,7 @@ function checkDiscountAndToggleClass() {
                     el.textContent = "-$50.00 off your 1st month";
                
             });
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
         }
     }
 }
@@ -61,7 +95,10 @@ function checkDiscountAndToggleClass() {
 
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 /// Configuration for conditions and corresponding prices
 const priceConditions = {
     'tirze-1': {
@@ -69,7 +106,11 @@ const priceConditions = {
         noDiscount: { regular: 'none', discount: '$397.00' }
     },
     'tirze-3': {
+<<<<<<< HEAD
+        apply: { regular: 'inline', discount: '$897.00' },
+=======
         apply: { regular: 'inline', discount: '$947.00' },
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
         noDiscount: { regular: 'none', discount: '$1047.00' }
     },
     // Add other conditions here
@@ -78,7 +119,11 @@ const priceConditions = {
         noDiscount: { regular: 'none', discount: '$297.00' }
     },
     'semag-3': {
+<<<<<<< HEAD
+        apply: { regular: 'inline', discount: '$597.00' },
+=======
         apply: { regular: 'inline', discount: '$647.00' },
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
         noDiscount: { regular: 'none', discount: '$747.00' }
     },
 	 'oral': {
@@ -90,6 +135,10 @@ const priceConditions = {
 
 
 // Function to update prices for all relevant sections
+<<<<<<< HEAD
+// Function to update prices for all relevant sections
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 function updatePricesForAll() {
     const finalItem = getUrlParameter('finalitem');
     const discount = getUrlParameter('discount');
@@ -162,6 +211,44 @@ function showStep(stepName) {
 	scrollToTop();
 }
 
+<<<<<<< HEAD
+// Function to show a specific step and clear boasterItem
+function showStepClearBoaster(stepName) {
+    // Uncheck all selected checkboxes
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = false; // Uncheck the checkbox
+        
+        // Update the label text and styling
+        const label = document.querySelector(`label[for="${checkbox.id}"]`);
+        if (label) {
+            label.textContent = "Select"; 
+            label.classList.remove("remove");
+        }
+    });
+
+    // Hide the current step
+    document.querySelector(`[data-step="${currentStep}"]`).style.display = 'none';
+    
+    // Show the new step
+    document.querySelector(`[data-step="${stepName}"]`).style.display = 'block';
+    
+    // Update the current step to the new step
+    currentStep = stepName;
+    
+    // Clear boasterItem parameter from the URL
+    const url = new URL(window.location.href);
+    url.searchParams.delete('boasterItem'); // Remove the boasterItem parameter
+    window.history.replaceState({}, document.title, url.toString()); // Update the browser's URL without reloading the page
+
+    scrollToTop();
+}
+
+
+
+
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 // Add event listeners to clear the error when the user starts typing or checking a field
 function attachInputListeners(fields) {
     fields.forEach(function(field) {
@@ -182,6 +269,10 @@ function removeDiscountParam() {
     const url = new URL(window.location.href);
     url.searchParams.delete('discount'); // Remove the parameter
     window.history.replaceState({}, '', url);
+<<<<<<< HEAD
+	showStep('mg-select');
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 }
 
 // Function to get URL parameters
@@ -298,11 +389,21 @@ function handleContinueClick() {
 
     // If 'finalitem' is present, use it to determine the step
     if (finalItemParam) {
+<<<<<<< HEAD
+        handleFinalItemParameter(); 
+        return; // Exit after handling 'finalitem' parameter
+    }
+
+  
+
+    // If no 'type' parameter or it's not 'boaster', proceed with 'item' parameter logic
+=======
        handleFinalItemParameter(); 
         return; // Exit after handling 'finalitem' parameter
     }
 
     // If no 'finalitem' parameter, use the original logic based on the 'item' parameter
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
     const prodParam = getUrlParameter('item');
 
     if (prodParam === 'semag-1') {
@@ -311,7 +412,10 @@ function handleContinueClick() {
         showStep('step-semag-3');
     } else if (prodParam === 'tirze-1') {
         showStep('step-tirze-1');
+<<<<<<< HEAD
+=======
 	
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
     } else if (prodParam === 'tirze-3') {
         showStep('step-tirze-3');
     } else if (prodParam === 'oral') {
@@ -319,7 +423,12 @@ function handleContinueClick() {
     } else {
         showStep('step-all-products');
     }
+<<<<<<< HEAD
+}
+	
+=======
 }	
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
 
 	
@@ -336,10 +445,67 @@ function addCartParameterAndShowNextStep(product, nextStep) {
     
     // Show the next step
     showStep(nextStep);
+<<<<<<< HEAD
+}
+
+// for booster step product start
+
+function addCartboasternextStep(product) {
+    // Get the current URL
+    let currentUrl = new URL(window.location.href);
+
+    // Check for 'type' and 'discount' parameters in the URL
+    const typeParam = currentUrl.searchParams.get('type');
+    const discountParam = currentUrl.searchParams.get('discount');
+
+    // If ?type=boaster&discount=apply, handle it and exit
+    if (typeParam === 'boaster' && discountParam === 'apply') {
+        return; // Exit the function
+    }
+
+    // Get the current value of the 'boasterItem' parameter
+    let boasterItems = currentUrl.searchParams.get('boasterItem');
+
+    // If the product checkbox is selected
+    if (document.getElementById(`${product}-select`).checked) {
+        // If 'boasterItem' exists, split it by the separator and add the new product to the array
+        if (boasterItems) {
+            boasterItems = boasterItems.split('-'); // Split the existing value by the separator
+            // Add the product only if it doesn't already exist in the array
+            if (!boasterItems.includes(product)) {
+                boasterItems.push(product); // Add the new product if it's not already in the list
+            }
+        } else {
+            boasterItems = [product]; // If 'boasterItem' doesn't exist, create a new array with the product
+        }
+    } else {
+        // If the checkbox is deselected, remove the product from the 'boasterItem' parameter
+        if (boasterItems) {
+            boasterItems = boasterItems.split('-'); // Split the existing value by the separator
+            boasterItems = boasterItems.filter(item => item !== product); // Remove the product from the array
+        }
+    }
+
+    // Update or remove the 'boasterItem' parameter
+    if (boasterItems && boasterItems.length > 0) {
+        currentUrl.searchParams.set('boasterItem', boasterItems.join('-'));
+    } else {
+        currentUrl.searchParams.delete('boasterItem'); // Remove the parameter if no items remain
+    }
+
+    // Update the browser's URL without refreshing the page
+    window.history.replaceState({}, '', currentUrl);
+}
+
+
+// for booster step product end
+
+=======
 	
 
 }
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 document.getElementById('customForm').addEventListener('submit', function(event) {
     const privacyPolicyCheckbox = document.getElementById('policy-checkbox');
     const privacyPolicyError = document.getElementById('policy-checkbox-error');
@@ -359,6 +525,27 @@ document.getElementById('customForm').addEventListener('submit', function(event)
 
 
 
+<<<<<<< HEAD
+
+// Function to go to the previous step or home page if on the error step
+function goToPreviousStep() {
+    if (currentStep === 'step-all-products' || currentStep === 'mg-select') {
+        showStep('step-6');
+        return;
+    }
+
+    const specialSteps = ['step-privacy', 'semag-1-dose', 'semag-3-dose', 'tirze-1-dose', 'tirze-3-dose', 'oral-dose'];
+
+    // Check if the current step is in the specialSteps array
+    if (specialSteps.includes(currentStep)) {
+        if (currentStep === 'step-privacy') {
+            showStep('boaster-step'); // Navigate to 'boaster-step' if current step is 'step-privacy'
+            return;
+        }
+        handleFinalItemParameter();
+        return;
+    }
+=======
 	
 	
 // Function to go to the previous step or home page if on the error step
@@ -379,12 +566,52 @@ function goToPreviousStep() {
     }
 	
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
     // If the current step is any of the product steps, return to 'step-6'
     if (productSteps.includes(currentStep)) {
         showStep('step-all-products');
         return;
     }
+<<<<<<< HEAD
+
+    // If current step is the error step, redirect to the home page
+    if (currentStep === 'step-error' || currentStep === 'step-state-error') {
+        window.location.href = '/';  // Redirect to the home page
+        return;
+    }
+
+    // Handle the 'boasterItem' step with URL parameter check
+    if (currentStep === 'boaster-step') {
+        const urlParams = new URLSearchParams(window.location.search);
+        const finalItem = urlParams.get('finalitem'); // Get 'finalItem' from URL parameters
+
+        switch (finalItem) {
+            case 'semag-1':
+                showStep('step-semag-1');
+                break;
+            case 'semag-3':
+                showStep('step-semag-3');
+                break;
+            case 'tirze-1':
+                showStep('step-tirze-1');
+                break;
+            case 'tirze-3':
+                showStep('step-tirze-3');
+                break;
+            case 'oral':
+                showStep('step-oral');
+                break;
+            default:
+                showStep('step-all-products');  // Default to 'step-all-products' if no match
+        }
+        return;
+    }
+
+    // Get the index of the current step in the stepOrder array
+    let currentIndex = stepOrder.indexOf(currentStep);
+
+=======
 	
 
     
@@ -398,6 +625,7 @@ function goToPreviousStep() {
     // Get the index of the current step in the stepOrder array
     let currentIndex = stepOrder.indexOf(currentStep);
     
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
     // Check if there is a previous step
     if (currentIndex > 0) {  
         let prevStep = stepOrder[currentIndex - 1];  // Get the previous step
@@ -407,6 +635,10 @@ function goToPreviousStep() {
 
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 function validateBMIFormAndContinue() {
     const fields = [
         { id: 'feet', errorId: 'feet-error', message: 'This field is required' },
@@ -482,7 +714,11 @@ function checkStateAndContinue() {
     const selectedState = document.getElementById('state').value.toLowerCase();  // Get the selected state value and convert it to lowercase
 
     // Array of restricted states
+<<<<<<< HEAD
+    const restrictedStates = ['alabama', 'arkansas', 'california', 'mississippi'];
+=======
     const restrictedStates = ['alabama', 'arkansas', 'mississippi'];
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
     // Check if the selected state is in the restrictedStates array
     if (restrictedStates.includes(selectedState)) {
@@ -527,9 +763,12 @@ function validateAndCheckState() {
 }
 
 
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 document.addEventListener('DOMContentLoaded', function() {
     const productCards = document.querySelectorAll('.product-card');
 
@@ -551,7 +790,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+<<<<<<< HEAD
+document.querySelectorAll('.product-cart-item-wrap').forEach(function (item) {
+    const productId = item.getAttribute('data-product_id');
+    const restrictedIds = ['343', '352', '353', '354', '355']; // Restricted product IDs
 
+    if (restrictedIds.includes(productId)) {
+        const qtyInput = item.querySelector('input.qty');
+        if (qtyInput) {
+            qtyInput.style.pointerEvents = 'none'; // Disable interaction
+        }
+    }
+});
+=======
+
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
 // Select all checkboxes with the 'single-selector' class
 // const checkboxes = document.querySelectorAll('.single-selector');

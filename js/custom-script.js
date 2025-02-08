@@ -19,7 +19,37 @@ jQuery(document).ready(function($) {
         }
     });
 	
+<<<<<<< HEAD
+
+
+
+// Use event delegation to attach the click event listener to dynamically created buttons
+// Use event delegation to attach the click event listener to dynamically created buttons
+$(document).on("click", ".remove-custom-cart", function (event) {
+    // Prevent the default action (navigation)
+    event.preventDefault();
+
+    // Log the data attributes or any other message
+    console.log("Remove button clicked:");
+    console.log("Product ID:", $(this).data("product_id"));
+    console.log("Product SKU:", $(this).data("product_sku"));
+
+    // Check for the presence of the `.cart-empty` div after 1–2 seconds
+    setTimeout(function () {
+        if ($(".cart-empty").length > 0) {
+            console.log(".cart-empty div has been added to the DOM.");
+            // Perform a hard reload by appending a unique query string
+            window.location.href = window.location.href.split('?')[0] + '?_=' + new Date().getTime();
+        } else {
+            console.log(".cart-empty div is not present in the DOM.");
+        }
+    }, 4000); // Wait for 4 seconds
+});
+
+
+=======
 	
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
   // Toggle the mobile menu when the icon is clicked
   $('#icon-toggle-mob').on('click', function () {
@@ -49,6 +79,8 @@ jQuery(document).ready(function($) {
         $(activeTab).addClass("active");
     });
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -56,6 +88,7 @@ jQuery(document).ready(function($) {
 
 
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
   // Attach the calculateBMI function to input change events
   $("#feet, #inches, #weight").on('input', function() {
       calculateBMI();
@@ -76,6 +109,10 @@ $('input[value="Got It"]').click(function(){
 	$('.product-model-popup').removeClass('show');
 	$('.popup-overlay').removeClass('show-overlay');
 });
+<<<<<<< HEAD
+
+});
+=======
 	 	
 
 jQuery(document).ready(function($) {
@@ -121,3 +158,4 @@ jQuery(document).ready(function($) {
 });
 
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2

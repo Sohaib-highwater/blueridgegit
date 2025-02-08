@@ -79,6 +79,20 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 			<div class="product-cart-item-wrap">
 					<div class="product-thumbnail">
+<<<<<<< HEAD
+<?php
+// Get the full-size image instead of the thumbnail
+$thumbnail = $_product->get_image('small'); // 'small' size retrieves the small image
+
+if ( ! $product_permalink ) {
+    echo $thumbnail; // Display the image if there's no product link
+} else {
+    // Simply display the image without wrapping it in a link
+    echo $thumbnail;
+}
+?>
+
+=======
 	<?php
 		// Get the full-size image instead of the thumbnail
 		$thumbnail = $_product->get_image('small'); // 'full' size retrieves the full-size image
@@ -90,6 +104,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail );
 		}
 	?>
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 </div>
 
 				
@@ -100,6 +115,22 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 			<div class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
 				<?php
+<<<<<<< HEAD
+if ( ! $product_permalink ) {
+    echo wp_kses_post( $product_name . '&nbsp;' );
+} else {
+    // Remove the link by just outputting the product name
+    echo wp_kses_post( $_product->get_name() );
+}
+
+do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
+echo wc_get_formatted_cart_item_data( $cart_item ); 
+
+if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
+    echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>', $product_id ) );
+}
+?>
+=======
 					if ( ! $product_permalink ) {
 						echo wp_kses_post( $product_name . '&nbsp;' );
 					} else {
@@ -113,6 +144,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>', $product_id ) );
 					}
 				?>
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 			</div>
 
 			<div class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
@@ -226,6 +258,77 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
 
+<<<<<<< HEAD
+		<div class="choose-booster-product-wrap step-main-wrapper step" data-step="boaster-step">
+			<div class="booster-product-section">
+				<h3 class="step-main-heading">CHOOSE YOUR BOOSTER</h3>
+				<p class="step-description">Monthly</p>
+				<div class="booster-product-select">
+					
+					<div class="booster-product-grid">
+						<div class="single-product-booster">
+							<h4>B12</h4>
+							<p class="pricing-amount">$60/mo</p>
+                            <img src="https://blueridgem2stg.wpenginepowered.com/wp-content/uploads/2024/12/B12-product-page-1.png" alt="B12">
+							<form action="https://blueridgem2stg.wpenginepowered.com/cart/" method="post">
+                                <input type="hidden" name="add-to-cart" value="1607">
+                                <input type="submit" value="Continue">
+                            </form>
+						</div>
+						<div class="single-product-booster">
+							<h4>Mic</h4>
+							<p class="pricing-amount">$60/mo</p>
+                            <img src="https://blueridgem2stg.wpenginepowered.com/wp-content/uploads/2024/12/MIC-product-page.png" alt="MIC">
+                            <form action="https://blueridgem2stg.wpenginepowered.com/cart/" method="post">
+                                <input type="hidden" name="add-to-cart" value="1610">
+                                <input type="submit" value="Continue">
+                            </form>
+						</div>
+						<div class="single-product-booster">
+							<h4>Sermorelin</h4>
+							<p class="pricing-amount">$249/mo</p>
+                            <img src="https://blueridgem2stg.wpenginepowered.com/wp-content/uploads/2024/12/SERMORELIN-product-page.png" alt="Sermorelin">
+                            <form action="https://blueridgem2stg.wpenginepowered.com/cart/" method="post">
+                                <input type="hidden" name="add-to-cart" value="1612">
+                                <input type="submit" value="Continue">
+                            </form>
+						</div>
+						<div class="single-product-booster">
+							<h4>Glutathione</h4>
+							<p class="pricing-amount">$179/mo</p>
+                            <img src="https://blueridgem2stg.wpenginepowered.com/wp-content/uploads/2024/12/GLUTATHIONE-product-page.png" alt="Glutathione">
+                           <form action="https://blueridgem2stg.wpenginepowered.com/cart/" method="post">
+                                <input type="hidden" name="add-to-cart" value="1611">
+                                <input type="submit" value="Continue">
+                            </form>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+			<div class="contact-wrap">
+                <div class="top-img">
+                    <img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/09/BlueRidge-logo-small.png" alt="">
+                </div>
+                <div class="contact-details">
+                    <p>Reach Out</p>
+                    <a href="tel:+18552952538">855-295-BLUE (2538)</a>
+                    <a href="mailto:Ask@blueridgemeds.com">Ask@blueridgemeds.com</a>
+                    <a href="https://www.blueridgemeds.com">https://www.blueridgemeds.com</a>
+                </div>
+            </div>
+		</div>
+
+<div class="step-main-wrapper choose-plan-tabs-wrap step" style="display: block;">
+    <div class="choose-plan-tabs-inner">
+        <!-- Header Section -->
+        <div class="cart-header-c">
+            <span>CHOOSE YOUR PLAN</span>
+            <h2>Change Mind?</h2>
+        </div>
+
+        <!-- Tabs Section -->
+=======
 
 
 <div class="step-main-wrapper choose-plan-tabs-wrap step" style="display:block;">
@@ -237,20 +340,47 @@ do_action( 'woocommerce_before_cart' ); ?>
 		</h2>
 	</div>
      
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
         <div class="pricing-plans-tabs choose-plan-tabs">
             <ul class="tab-header">
                 <li class="active"><a href="#monthly">Monthly Payment</a></li>
                 <li><a href="#3month">Jumpstart (3-months)</a></li>
             </ul>
+<<<<<<< HEAD
+
             <div class="tab-content">
                 <!-- Monthly Membership Content -->
                 <div id="monthly" class="tab-grid tab-pane active">
+                    <!-- Plan 1: Semaglutide Program -->
+=======
+            <div class="tab-content">
+                <!-- Monthly Membership Content -->
+                <div id="monthly" class="tab-grid tab-pane active">
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
                     <div class="tab-inner-content">
                         <div class="choose-plan-upper">
                             <h4>Semaglutide Program</h4>
                             <p class="pricing-amount">$297/mo</p>
                             <p class="pricing-discount">-$100.00 off your 1st month</p>
                             <img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/09/BlueRidge-Semaglutide-1-bottle-1-1.png" alt="">
+<<<<<<< HEAD
+                            <form action="<?php echo esc_url(wc_get_cart_url()); ?>" method="post">
+                                <input type="hidden" name="add-to-cart" value="343">
+                                <input type="submit" value="Continue">
+                            </form>
+                        </div>
+                        <ul class="membership-features">
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Same active ingredients as Ozempic® and Wegovy®</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Once weekly injections</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Doctor’s visits included</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Unlimited provider support</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Same price regardless of dosage</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Pause or cancel your membership anytime</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Plan 2: Oral Semaglutide Program -->
+=======
 							<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
     <input type="hidden" name="add-to-cart" value="343" /> <!-- semag-1 -->
     <input type="submit" value="Continue" />
@@ -286,12 +416,82 @@ do_action( 'woocommerce_before_cart' ); ?>
                         </ul>
                     </div>
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
                     <div class="tab-inner-content">
                         <div class="choose-plan-upper">
                             <h4>Oral Semaglutide <br> Program</h4>
                             <p class="pricing-amount">$249/mo</p>
                             <p class="pricing-discount">-$100.00 off your 1st month</p>
                             <img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/09/Revised-BlueRidge-Oral-Semaglutide-1-2.png" alt="">
+<<<<<<< HEAD
+                            <form action="<?php echo esc_url(wc_get_cart_url()); ?>" method="post">
+                                <input type="hidden" name="add-to-cart" value="355">
+                                <input type="submit" value="Continue">
+                            </form>
+                        </div>
+                        <ul class="membership-features">
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Same active ingredients as Ozempic® and Wegovy®</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Once weekly injections</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Doctor’s visits included</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Unlimited provider support</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Same price regardless of dosage</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Pause or cancel your membership anytime</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3 Month Membership Content -->
+                <div id="3month" class="tab-grid tab-pane">
+                    <!-- Plan 1: Semaglutide Program -->
+                    <div class="tab-inner-content">
+                        <div class="choose-plan-upper">
+                            <h4>Semaglutide Program</h4>
+                            <p class="pricing-amount">$747</p>
+                            <p class="pricing-discount">-$100.00 off your 1st purchase</p>
+                            <img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/09/BlueRidge-Semaglutide-1-bottle-1.png" alt="">
+                            <form action="<?php echo esc_url(wc_get_cart_url()); ?>" method="post">
+                                <input type="hidden" name="add-to-cart" value="352">
+                                <input type="submit" value="Continue">
+                            </form>
+                        </div>
+                        <ul class="membership-features">
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Same active ingredients as Ozempic® and Wegovy®</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Once weekly injections</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Doctor’s visits included</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Unlimited provider support</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Same price regardless of dosage</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Pause or cancel your membership anytime</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Plan 2: Tirzepatide Program -->
+                    <div class="tab-inner-content">
+                        <div class="choose-plan-upper">
+                            <h4>Tirzepatide Program</h4>
+                            <p class="pricing-amount">$1,047</p>
+                            <p class="pricing-discount">-$100.00 off your 1st purchase</p>
+                            <img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/09/Layer-5-1.png" alt="">
+                            <form action="<?php echo esc_url(wc_get_cart_url()); ?>" method="post">
+                                <input type="hidden" name="add-to-cart" value="354">
+                                <input type="submit" value="Continue">
+                            </form>
+                        </div>
+                        <ul class="membership-features">
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Same active ingredients as Ozempic® and Wegovy®</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Once weekly injections</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Doctor’s visits included</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Unlimited provider support</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Same price regardless of dosage</span></li>
+                            <li class="feature-item"><img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/08/tick-light-blue.png" alt="Tick icon"><span class="feature-text">Pause or cancel your membership anytime</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+=======
                                    					<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
     <input type="hidden" name="add-to-cart" value="355" /> <!-- semag-1 -->
     <input type="submit" value="Continue" />
@@ -407,6 +607,7 @@ do_action( 'woocommerce_before_cart' ); ?>
             </div>
         </div>
     </div>
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 <!-- 			<div class="contact-wrap">
                 <div class="top-img">
                     <img src="https://blueridgemeds.wpenginepowered.com/wp-content/uploads/2024/09/BlueRidge-logo-small.png" alt="">
@@ -418,4 +619,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                     <a href="https://www.blueridgemeds.com">https://www.blueridgemeds.com</a>
                 </div>
             </div> -->
+<<<<<<< HEAD
+=======
 </div>
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2

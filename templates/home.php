@@ -86,8 +86,11 @@
 	</div>
 <?php endif; ?>
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 <section id="weightlossprograms" class="invest-guidance-wrap">
         <?php 
             $invest_guidance = get_field('guidance_details');
@@ -208,7 +211,11 @@
                 </div>
                 <!-- Monthly Membership Content -->
                 <?php if (have_rows('3_monthly_tab_content')): ?>
+<<<<<<< HEAD
+                    <div id="3month" class="tab-grid tab-pane three-month">
+=======
                     <div id="3month" class="tab-grid tab-pane">
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
                             <?php while (have_rows('3_monthly_tab_content')): the_row(); 
                                 $membership_plan = get_sub_field('membership_plan');
                                 $plan_name = get_sub_field('plan_name');
@@ -272,6 +279,61 @@
     </div>
 </section>
 
+<<<<<<< HEAD
+<!-- Boosters Weight Product -->
+
+<section id="" class="invest-guidance-wrap boosters-weight-product">
+        <?php 
+            $boosters_product = get_field('boosters_product_details');
+        ?>
+    <div class="container">
+        <div class="guidance-details-box">
+            <h3 class="new-style-heading"><?php echo $boosters_product['heading'] ?? ''; ?></h3>
+            <p><?php echo $boosters_product['guide_description'] ?? ''; ?></p>
+        
+            <?php if (have_rows('boosters_weight_product')): ?>
+                <div class="guidance-inner-content booster-product-inner">
+                    <?php while (have_rows('boosters_weight_product')): the_row();
+                        $image = get_sub_field('image'); 
+                        $pricing_starting_at = get_sub_field('pricing_starting_at');
+                        $medication_option = get_sub_field('medication_option');
+						$link_get_started = get_sub_field('link_get_started');
+						$get_started_text = get_sub_field('text_get_started');
+						$link_learn_more = get_sub_field('link_learn_more');
+						$learn_more_text = get_sub_field('text_learn_more');
+                        ?>
+                        
+                        <div class="guidance-box">
+                            <?php if ($image): ?>
+                                <img src="<?php echo $image; ?>" alt="">
+                            <?php endif; ?>
+
+                            <?php if ($pricing_starting_at): ?>
+                                <span><?php echo $pricing_starting_at; ?></span>
+                            <?php endif; ?>
+
+                            <?php if ($medication_option): ?>
+                                <p><?php echo $medication_option; ?></p>
+                            <?php endif; ?>
+							
+							<div class="button-wrapper">
+								<a class="button button--primary" href="<?php echo esc_url( $link_get_started ); ?>">
+										<?php echo $get_started_text; ?>
+								</a>
+								<a class="button button--secondary" href="<?php echo esc_url( $link_learn_more ); ?>">
+										<?php echo $learn_more_text; ?>
+								</a>
+							</div>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
+
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 <section id="howitworks" class="how-to-started-wrap">
     <div class="container">
         <?php 
@@ -511,4 +573,40 @@
     </div>
 </section>
 
+<<<<<<< HEAD
+
+<script>
+	jQuery(document).ready(function($) {
+    $('.booster-product-inner').slick({
+        dots: true,
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    });
+});
+
+	
+</script>
+
+
+
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 <?php get_footer() ?>

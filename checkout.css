@@ -1,10 +1,16 @@
 /* Cart */
+<<<<<<< HEAD
+
+.woocommerce-cart .choose-plan-tabs-inner {
+    display: none;
+=======
 #billing_address_1_field:after {
     content: "Note: We can't ship to PO Box addresses";
     font-size: 13px;
     display: block;
     color: red;
     margin-left: 8px;
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 }
 span.subscription-price span.subscription-details:after {
     font-size: 17px !important;
@@ -13,10 +19,62 @@ span.subscription-price span.subscription-details:after {
 span.subscription-price span.subscription-details {
     font-size: 0;
 }
+<<<<<<< HEAD
+.woocommerce-cart .choose-booster-product-wrap.step-main-wrapper.step {
+	display:block !important;
+	    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.woocommerce-cart .single-product-booster form input{
+width: 100%;
+    background: var(--blue-shadow);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 0;
+    text-align: center;
+    color: #fff;
+    border: 1px solid var(--blue-shadow);
+    transition: 0.2s all;
+    font-family: "Poppins", sans-serif;
+    display: block;
+}
+.woocommerce-cart .single-product-booster form input:hover{
+width: 100%;
+    background: var(--blue-shadow);
+}
+.woocommerce-cart  .booster-product-select {
+    padding-top: 0 !important;
+}
+.woocommerce-cart  .booster-product-grid .submit {
+    width: 100%;
+    background: var(--blue-shadow);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 0;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    border: 1px solid var(--blue-shadow);
+    transition: 0.2s all;
+    font-family: "Poppins", sans-serif;
+}
+
+.woocommerce-cart .booster-product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+=======
 .shipping-col-checkout-hide h3 {
     display: none;
 }
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 /* .shipping_address {
     display: block !important;
 } */
@@ -116,6 +174,11 @@ h3#ship-to-different-address {
 }
 .custom-woocommerce-cart-main img {
     width: 110px;
+<<<<<<< HEAD
+    height: 110px;
+    object-fit: contain;
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 }
 .product-details-col {
     display: flex;
@@ -459,7 +522,13 @@ p#billing_address_1_field.po-box-warning:after {
     justify-content: space-between;
 }
 .custom-review-order-checkout-sec .product-image img {
+<<<<<<< HEAD
+    width: 77px;
+    height: 95px;
+    object-fit: contain;
+=======
     width: 70px;
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 }
 
 h3#order_review_heading {
@@ -585,7 +654,70 @@ label[for="payment_method_authorize_net_cim_credit_card"] {
     padding-top: 7px;
 }
 
+<<<<<<< HEAD
+/* cart empty css */
+
+.woocommerce-cart .return-to-shop {
+	text-align:center;
+	margin-bottom:0;
+}
+
+.woocommerce-cart .return-to-shop button {
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 20px;
+    background-color: var(--blue-light);
+    border: 1px solid var(--blue-light);
+    color: var(--white-color);
+    padding: 8px 35px;
+	font-family: "Poppins", sans-serif;
+}
+
+.woocommerce-cart .button.wc-backward:hover {
+	background: var(--blue-light);
+    color: var(--white-color);
+}
+
+.cart-current-empty {
+	padding: 60px 30px;
+    background-color: var(--off-white);
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.cart-current-empty .woocommerce-info {
+    border: none;
+	background-color:transparent;
+	font-size:22px;
+	line-height:30px;
+	font-weight:400;
+	color: var(--blue-light);
+	padding:0;
+	text-align:center;
+	margin-bottom:20px;
+}
+
+.cart-current-empty .woocommerce-info::before {
+	display:none;
+}
+
 @media only screen and (max-width: 768px) {
+	.cart-current-empty {
+    	padding: 40px 20px;
+	}
+	
+	.cart-current-empty .woocommerce-info {
+    	font-size: 15px;
+		line-height:18px;
+	}
+	
+	.woocommerce-cart .return-to-shop button {
+		font-size: 12px;
+		padding:5px 25px;
+	}
+=======
+@media only screen and (max-width: 768px) {
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 	
 	/* what expect css */
 	

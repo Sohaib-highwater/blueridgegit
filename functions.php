@@ -1,5 +1,22 @@
 <?php
 
+<<<<<<< HEAD
+add_filter('woocommerce_add_to_cart_validation', 'prevent_duplicate_cart_item', 10, 3);
+function prevent_duplicate_cart_item($passed, $product_id, $quantity) {
+    foreach (WC()->cart->get_cart() as $cart_item) {
+        if ($cart_item['product_id'] == $product_id) {
+            wc_add_notice(__('This item is already in your cart.'), 'notice');
+            return false;
+        }
+    }
+    return $passed;
+}
+
+
+
+
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 function my_theme_enqueue_styles() {
     $parent_style = 'generatepress-child-style';
     
@@ -60,6 +77,10 @@ add_filter( 'body_class', 'add_page_title_to_body_class' );
 
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 function my_child_theme_enqueue_scripts() {
     // Enqueue jQuery
     wp_enqueue_script('jquery');
@@ -102,6 +123,32 @@ add_action( 'widgets_init', 'custom_generatepress_widgets_init' );
 
 
 
+<<<<<<< HEAD
+// // Start session if not already started
+// add_action('init', 'start_session');
+// function start_session() {
+//     if (!session_id()) {
+//         session_start();
+//     }
+	
+	
+// }
+
+
+
+
+
+
+
+function handle_custom_template_form() {
+    // Ensure WooCommerce sessions are initialized
+    if ( ! WC()->session ) {
+        WC()->session = new WC_Session_Handler();
+        WC()->session->init();
+    }
+
+    // Check if the form is submitted
+=======
 // Start session if not already started
 add_action('init', 'start_session');
 function start_session() {
@@ -131,11 +178,17 @@ function clear_woocommerce_cart() {
 
 
 function handle_custom_template_form() {
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
     if ( isset( $_POST['submit_form'] ) ) {
         // Sanitize and handle form inputs
         $fname = sanitize_text_field( $_POST['fname'] );
         $lname = sanitize_text_field( $_POST['lname'] );
         $email = sanitize_email( $_POST['email'] );
+<<<<<<< HEAD
+
+        // Send email notification
+        $to = array( "sohaib@freedommedia.com" );
+=======
         $phone = sanitize_text_field( $_POST['phone'] );
         $dob = sanitize_text_field( $_POST['dob'] );
         $state = sanitize_text_field( $_POST['state'] );
@@ -168,19 +221,93 @@ function handle_custom_template_form() {
 
         // Send email notification
         $to = array( "ask@blueridgemeds.com" );
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
         $subject = "New Form Submission";
         $body = "You have received a new form submission:\n\n";
         $body .= "First Name: $fname\n";
         $body .= "Last Name: $lname\n";
         $body .= "Email: $email\n";
+<<<<<<< HEAD
+=======
         $body .= "Phone: $phone\n";
         $body .= "State: $state\n";
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
         $headers = array(
             'Content-Type: text/plain; charset=UTF-8',
             'From: Your Website <no-reply@yourdomain.com>'
         );
 
+<<<<<<< HEAD
+        if ( wp_mail( $to, $subject, $body, $headers ) ) {
+            // Product maps
+            $product_map = array(
+                'tirze-3' => 354,
+                'tirze-1' => 353,
+                'semag-1' => 343,
+                'semag-3' => 352,
+                'oral'    => 355,
+            );
+
+            $boaster_item_map = array(
+                'b12' => 1607,
+                'mic' => 1610,
+                'serm' => 1612,
+                'gluth' => 1611,
+            );
+
+            // Ensure WooCommerce cart is loaded
+            if ( ! WC()->cart ) {
+                WC()->initialize_cart();
+            }
+
+            $products_added = false;
+
+            // Handle final item
+            if ( isset( $_GET['finalitem'] ) ) {
+                $final_item = sanitize_text_field( $_GET['finalitem'] );
+                WC()->session->set( 'finalitem', $final_item );
+
+                if ( isset( $product_map[ $final_item ] ) ) {
+                    $product_id = $product_map[ $final_item ];
+                    WC()->cart->add_to_cart( $product_id );
+
+                    // Handle discounts
+                    if ( isset( $_GET['discount'] ) && $_GET['discount'] === 'apply' ) {
+                        $coupon_code = strpos( $final_item, '3' ) !== false ? '150-disocunt' : '1st-month-discount';
+                        if ( $coupon_code && ! WC()->cart->has_discount( $coupon_code ) ) {
+                            WC()->cart->apply_coupon( $coupon_code );
+                        }
+                    }
+
+                    $products_added = true;
+                }
+            }
+
+            // Handle multiple boaster items
+            if ( isset( $_GET['boasterItem'] ) ) {
+                $boaster_items = sanitize_text_field( $_GET['boasterItem'] );
+                $boaster_items_array = explode( '-', $boaster_items ); // Split by hyphen
+
+                foreach ( $boaster_items_array as $boaster_item ) {
+                    if ( isset( $boaster_item_map[ $boaster_item ] ) ) {
+                        $booster_product_id = $boaster_item_map[ $boaster_item ];
+                        WC()->cart->add_to_cart( $booster_product_id );
+                        $products_added = true;
+                    }
+                }
+
+                WC()->session->set( 'boasterItem', $boaster_items );
+            }
+
+            // Redirect or show an error if no products added
+            if ( $products_added ) {
+                WC()->cart->calculate_totals(); // Recalculate totals
+                wp_safe_redirect( wc_get_cart_url() );
+                exit;
+            } else {
+                echo '<p>Error: No products added to the cart.</p>';
+=======
         $mail_sent = wp_mail( $to, $subject, $body, $headers );
 
         if ( $mail_sent ) {
@@ -250,17 +377,43 @@ function handle_custom_template_form() {
             } else {
                 wp_redirect( home_url("/thank-you") );
                 exit;
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
             }
         } else {
             echo '<p>Error: Unable to send the email notification.</p>';
         }
     }
+<<<<<<< HEAD
+
+    // Handle persisted session values (for cart reloads)
+    $final_item = WC()->session->get( 'finalitem' );
+    $boaster_item = WC()->session->get( 'boasterItem' );
+
+    if ( $final_item && isset( $product_map[ $final_item ] ) ) {
+        $product_id = $product_map[ $final_item ];
+        WC()->cart->add_to_cart( $product_id );
+    }
+
+    if ( $boaster_item ) {
+        $boaster_items_array = explode( '-', $boaster_item );
+        foreach ( $boaster_items_array as $item ) {
+            if ( isset( $boaster_item_map[ $item ] ) ) {
+                $booster_product_id = $boaster_item_map[ $item ];
+                WC()->cart->add_to_cart( $booster_product_id );
+            }
+        }
+    }
+}
+
+add_action( 'wp_loaded', 'handle_custom_template_form' );
+=======
 }
 
 add_action( 'init', 'handle_custom_template_form' );
 
 
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
 
 
@@ -323,6 +476,8 @@ function populate_email_checkout_field() {
 
 
 
+<<<<<<< HEAD
+=======
 add_action('woocommerce_thankyou', 'clear_session_data');
 function clear_session_data() {
     if (isset($_SESSION['form_data'])) {
@@ -330,6 +485,7 @@ function clear_session_data() {
     }
 }
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
 
 
@@ -360,6 +516,62 @@ function hide_cart_message_on_checkout() {
 add_action('wp', 'hide_cart_message_on_checkout');
 
 
+<<<<<<< HEAD
+add_filter('woocommerce_customer_details_email', 'add_mailto_to_email_address', 10, 2);
+
+
+// add_action('woocommerce_checkout_shipping', 'custom_woocommerce_checkout_shipping', 10);
+
+// function custom_woocommerce_checkout_shipping() {
+//     echo '<h3>Shipping Address</h3>';
+// }
+
+
+add_action( 'woocommerce_subscription_details_after_shipping_address', 'add_edit_billing_address_button' );
+
+function add_edit_billing_address_button( $subscription ) {
+    $edit_billing_url = wc_get_endpoint_url( 'edit-address', 'billing', wc_get_page_permalink( 'myaccount' ) );
+    ?>
+    <a href="<?php echo esc_url( $edit_billing_url ); ?>" class="button edit-billing-address">
+        <?php esc_html_e( 'Edit Billing address', 'woocommerce' ); ?>
+    </a>
+    <?php
+}
+
+
+// Set a maximum cart quantity of 1 for Any Pro items only START
+
+// Prevent duplicate additions in the cart
+add_filter('woocommerce_add_cart_item_data', 'limit_product_quantity_in_cart', 10, 3);
+function limit_product_quantity_in_cart($cart_item_data, $product_id, $variation_id) {
+    foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
+        if ($cart_item['product_id'] == $product_id) {
+            // Remove the existing item to prevent duplication
+            WC()->cart->remove_cart_item($cart_item_key);
+        }
+    }
+    return $cart_item_data;
+}
+
+// Ensure the cart quantity remains at 1 per product
+add_action('woocommerce_check_cart_items', 'set_max_quantity_per_item');
+function set_max_quantity_per_item() {
+    foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
+        if ($cart_item['quantity'] > 1) {
+            WC()->cart->set_quantity($cart_item_key, 1);
+        }
+    }
+}
+
+// Force the cart to update after adding an item
+add_action('woocommerce_add_to_cart', 'force_cart_update_after_add', 10, 6);
+function force_cart_update_after_add($cart_item_key, $product_id, $quantity, $variation_id, $variation, $cart_item_data) {
+    WC()->cart->calculate_totals();
+    WC()->cart->set_session();
+}
+
+// Set a maximum cart quantity of 1 for Any Pro items only End
+=======
 
 
 
@@ -371,6 +583,7 @@ function custom_woocommerce_checkout_shipping() {
 
 
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
 
 // Add custom CSS to WooCommerce emails.
 add_filter('woocommerce_email_styles', 'custom_woocommerce_email_styles');
@@ -393,6 +606,8 @@ function custom_woocommerce_email_styles($css) {
     ";
     return $css;
 }
+<<<<<<< HEAD
+=======
 
 
 
@@ -409,3 +624,4 @@ function custom_woocommerce_email_styles($css) {
 
 
 
+>>>>>>> 1a345f53bf303ef4add3131a6410deda042cbdc2
